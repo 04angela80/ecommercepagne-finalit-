@@ -1,0 +1,233 @@
+/* Définition des variables CSS pour les couleurs et polices principales */
+:root {
+    --main-color: #e91e63; /* Rose framboise élégant */
+    --accent-color: #ffb400; /* Or doux */
+    --bg-color: #fff6fa; /* Fond clair rosé */
+    --text-color: #333;
+    --font-main: 'Poppins', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+/* Réinitialisation du box-sizing et suppression des marges/paddings par défaut */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général du body */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation principale centrée horizontalement */
+.main-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espace entre les liens */
+    padding: 0;
+    margin: 1.2rem 0 0 0;
+}
+
+/* Style des liens de la navigation */
+.main-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+/* Couleur des liens au survol */
+.main-nav li a:hover {
+    color: #ffb400;
+}
+
+/* Style du titre principal */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin-top: 1;
+    margin-bottom:2;
+    font-size: 2.5rem;
+}
+
+/* Conteneur principal du panier */
+#contenu-panier {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px #e91e6322;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Style d'un article du panier */
+.panier-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+/* Retire la bordure du dernier article */
+.panier-item:last-child {
+    border-bottom: none;
+}
+
+/* Image de l'article du panier */
+.panier-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e91e63;
+    background: #fff6fa;
+}
+
+/* Nom de l'article */
+.panier-nom {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Prix de l'article */
+.panier-prix {
+    color: #ffb400;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Quantité de l'article */
+.panier-quantite {
+    color: #e91e63;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+/* Total pour l'article */
+.panier-total {
+    color: #009688;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Bouton pour supprimer un article */
+.btn-supprimer {
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+/* Changement de couleur au survol du bouton supprimer */
+.btn-supprimer:hover {
+    background: #b71c4a;
+}
+
+/* Bouton pour payer */
+.btn-payer {
+    background: #ffb400;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2rem auto 0 auto;
+    display: block;
+    transition: background 0.2s;
+}
+/* Changement de couleur au survol du bouton payer */
+.btn-payer:hover {
+    background: #e91e63;
+}
+
+/* Message affiché quand le panier est vide */
+.panier-vide {
+    text-align: center;
+    color: #e91e63;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+}
+
+/* Bandeau principal du panier */
+.panier-hero {
+    background: var(--main-color);
+    padding: 1.2rem 1rem 1rem 1rem;
+    text-align: center;
+    position: relative; /* Pour positionner le panier flottant à l'intérieur */
+}
+
+/* Titre du bandeau panier */
+.panier-hero-text h2 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Paragraphe du bandeau panier */
+.panier-hero-text p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/* Message de paiement en cours ou réussi */
+.paiement-message {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 40px 0;
+}
+/* Couleur orange pour le message de succès */
+.paiement-message.succes {
+    color: #ffb400;
+}
+
+/* Centrage et espacement du titre et du texte descriptif du panier */
+.panier-titre-desc {
+    text-align: center;
+    margin: 2.5rem 0 1.5rem 0;
+}
+
+.panier-titre-desc h2 {
+    font-family: var(--font-heading);
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.panier-titre-desc p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* -------- Responsive : adaptation sur petits écrans -------- */
+@media (max-width: 600px) {
+    #contenu-panier {
+        padding: 1rem 0.3rem;
+    }
+    .panier-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+    .btn-payer {
+        width: 100%;
+    }
+}

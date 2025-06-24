@@ -1,0 +1,447 @@
+:root {
+    /* Définition des variables CSS pour les couleurs et polices principales */
+    --main-color: #e91e63; /* Rose framboise élégant */
+    --accent-color: #ffb400; /* Or doux */
+    --bg-color: #fff6fa; /* Fond clair rosé */
+    --text-color: #333;
+    --font-main: 'Poppins', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+/* Réinitialisation du box-sizing et suppression des marges/paddings par défaut */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général du body */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Style du header (bannière du haut) */
+header {
+    background: var(--main-color);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Conteneur du logo et du titre */
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Style du logo (image ronde avec ombre) */
+.logo-title img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style du titre principal */
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+}
+
+/* Style de l'icône panier (Font Awesome) */
+.fa fa-shopping-cart {
+    font-size: 36px;
+    color: #fff;
+}
+
+/* Style du compteur du panier */
+#compteur-panier {
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 2px;
+    min-width: 32px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ffb40055;
+}
+
+/* -------- NAVIGATION -------- */
+
+/* Barre de navigation centrée */
+nav {
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centrage horizontal des liens de navigation */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+/* Espacement horizontal entre les éléments de la liste */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Style des liens de navigation */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* Changement de couleur au survol des liens */
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* -------- SECTION HERO -------- */
+
+/* Section principale du catalogue avec fond dégradé */
+.catalogue-hero {
+    background: linear-gradient(rgba(233,30,99,0.08), rgba(255,180,0,0.08));
+    padding: 2.5rem 1rem 1.5rem 1rem;
+    text-align: center;
+}
+
+/* Titre de la section catalogue */
+.catalogue-hero h2 {
+    font-family: var(--font-heading);
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Paragraphe de la section catalogue */
+.catalogue-hero p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+/* -------- CHOIX PAGNE -------- */
+
+/* Conteneur des cartes de choix de pagne */
+.choix-pagne {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+}
+
+/* Carte individuelle de pagne */
+.pagne-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px #e91e6322;
+    width: 270px;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Effet au survol ou sélection d'une carte */
+.pagne-card:hover, .pagne-card.active {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px #e91e6340;
+    border: 2px solid var(--main-color);
+}
+
+/* Image dans la carte pagne */
+.pagne-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Titre de la carte pagne */
+.pagne-card h3 {
+    color: var(--main-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+/* Description de la carte pagne */
+.pagne-card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Bouton "Voir plus" dans la carte pagne */
+.pagne-card .btn {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px #0002;
+    cursor: pointer;
+}
+
+/* Effet au survol du bouton "Voir plus" */
+.pagne-card .btn:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* Bouton "Ajouter au panier" */
+.btn-panier {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Effet au survol du bouton panier */
+.btn-panier:hover {
+    background: var(--main-color);
+}
+
+/* -------- LISTE DES MODÈLES -------- */
+
+/* Conteneur des modèles affichés */
+#modeles-pagne {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+/* Liste des modèles sous forme de flexbox */
+.liste-modeles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Carte individuelle de modèle */
+.modele-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #e91e6322;
+    width: 220px;
+    padding: 1rem 0.5rem 1.2rem 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: transform 0.18s;
+}
+
+/* Effet au survol de la carte modèle */
+.modele-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px #e91e6340;
+}
+
+/* Image dans la carte modèle */
+.modele-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
+}
+
+/* Titre de la carte modèle */
+.modele-card h4 {
+    font-size: 1.05rem;
+    color: #e91e63;
+    margin-bottom: 0.3rem;
+}
+
+/* Prix dans la carte modèle */
+.modele-card .prix {
+    color: #ffb400;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* -------- RESPONSIVE -------- */
+
+/* Adaptation de la liste des modèles sur petits écrans */
+@media (max-width: 900px) {
+    .liste-modeles {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modele-card {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* Adaptation des cartes pagne sur petits écrans */
+@media (max-width: 900px) {
+    .choix-pagne {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pagne-card {
+        width: 95%;
+        max-width: 350px;
+    }
+}
+
+/* -------- FOOTER -------- */
+
+/* Style général du footer */
+footer {
+    background: var(--main-color);
+    color: white;
+    font-family: var(--font-main);
+    margin-top: 0rem;
+    margin-bottom: 0;
+}
+
+/* Conteneur du footer avec flexbox */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Section individuelle du footer */
+.footer-section {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+/* Titres du footer */
+.footer-section h3,
+.footer-section h4 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+/* Texte du footer */
+.footer-section p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Bande rose en bas du footer */
+.footer-rose{
+    width: 100%;
+    height: 60px;
+    background-color: #e91e63;
+}
+
+/* Icônes des réseaux sociaux */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 0.8rem;
+}
+
+/* Style des images des réseaux sociaux */
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Effet au survol des icônes réseaux sociaux */
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Bas du footer */
+.footer-bottom {
+    background: wheat;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: black;
+    border-top: 1px solid #444;
+}
+
+/* -------- PANIER FLOTTANT -------- */
+
+/* Positionnement et style du panier flottant à droite de la nav */
+#panier-flottant {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 30px;
+    padding: 8px 18px;
+    box-shadow: 0 2px 12px #e91e6322;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Style de l'icône panier dans le panier flottant */
+#panier-flottant i {
+    font-size: 1.7em;
+    color: #fff;
+    margin-right: 8px;
+}
+
+/* Footer responsive sur petits écrans */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+

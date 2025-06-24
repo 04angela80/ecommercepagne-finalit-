@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique AfriStyle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalogues.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.2.jpg" alt="logo.2.jpg">
+      <h1>AfriStyle Boutique</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Accueil.html">Accueil</a></li>
+        <li><a href="Catalogues.html">Catalogues</a></li>
+        <li><a href="Appros.html">À propos</a></li>
+        <li><a href="c.html">Contact</a></li>
+      </ul>
+      <div id="panier-flottant" class="dans-hero">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="compteur-panier">0</span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="catalogue-hero">
+      <div class="hero-header">
+        <h2>Découvrez Nos merveilles</h2>
+      </div>
+      <p>Explorez notre sélection de pagnes africains tendance, pour sublimer votre style en toute occasion.</p>
+      <div class="choix-pagne">
+        <div class="pagne-card" onclick="showModeles('wax')">
+          <img src="i.wax/wax.png" alt="pagne wax">
+          <h3>Pagne Wax</h3>
+          <p>Couleurs éclatantes, motifs uniques, parfait pour toutes vos créations modernes.</p>
+          <button class="btn" type="button">Voir plus</button>
+        </div>
+        <div class="pagne-card" onclick="showModeles('super')">
+          <img src="i.wax/super.png" alt="Pagne Super">
+          <h3>Pagne Super</h3>
+          <p>Haute couture moderne, parfait pour une cérémonie ou une soirée.</p>
+          <button class="btn" type="button">Voir plus</button>
+        </div>
+        <div class="pagne-card" onclick="showModeles('hollandais')">
+          <img src="i.wax/hollandais.png" alt="Pagne Hollandais">
+          <h3>Pagne Hollandais</h3>
+          <p>Le choix des connaisseurs : motifs classiques, grande résistance et prestige.</p>
+          <button class="btn" type="button">Voir plus</button>
+        </div>
+      </div>
+
+      <!-- Wax -->
+      <ul id="wax-images" style="display:none;">
+        <li data-prix="25"><img src="i.wax/wax1.jpg" alt="Wax 1"></li>
+        <li data-prix="30"><img src="i.wax/wax2.jpg"alt="Wax 2"></li>
+        <li data-prix="32"><img src="i.wax/wax9.jpg" alt="Wax 3"></li>
+        <li data-prix="18"><img src="i.wax/wax4.jpg"alt="Wax 4"></li>
+        <li data-prix="29"><img src="i.wax/wax8.jpg" alt="Wax 5"></li>
+        <li data-prix="40"><img src="i.wax/wax6.jpg" alt="Wax 6"></li>
+        <li data-prix="45"><img src="i.wax/wax7.jpg"alt="Wax 7"></li>
+        <li data-prix="50"><img src="i.wax/wax5.jpg" alt="Wax 8"></li>
+        <li data-prix="55"><img src="i.wax/wax11.jpg"alt="Wax 9"></li>
+        <li data-prix="60"><img src="i.wax/wax10.jpg"alt="Wax 10"></li>
+      </ul>
+
+      <!-- Super -->
+      <ul id="super-images" style="display:none;">
+        <li data-prix="25"><img src="i.supper/super.jpg" alt="Super 1"></li>
+        <li data-prix="38"><img src="i.supper/super1.jpg" alt="Super 2"></li>
+        <li data-prix="16"><img src= "i.supper/super2.jpg"alt="Super 3"></li>
+        <li data-prix="30"><img src="i.supper/super3.jpg"alt="Super 4"></li>
+        <li data-prix="43"><img src="i.supper/super14.jpg" alt="Super 5"></li>
+        <li data-prix="45"><img src="i.supper/sper5 (2).jpg" alt="Super 6"></li>
+        <li data-prix="18"><img src="i.supper/super4.jpg"alt="Super 7"></li>
+        <li data-prix="40"><img src="i.supper/super15.jpg"alt="Super 8"></li>
+        <li data-prix="60"><img src="i.supper/super8.jpg"alt="Super 9"></li>
+        <li data-prix="50"><img src="i.supper/super9.jpg"alt="Super 10"></li>
+      </ul>
+
+      <!-- Hollandais -->
+      <ul id="hollandais-images" style="display:none;">
+        <li data-prix="60"><img src="i.hollandais/hollandais.jpg" alt="Hollandais 1"></li>
+        <li data-prix="65"><img src="i.hollandais/hollandais1.jpg"alt="Hollandais 2"></li>
+        <li data-prix="70"><img src="i.hollandais/hollandais2.jpg" alt="Hollandais 3"></li>
+        <li data-prix="76"><img src="i.hollandais/hollandais3.jpg" alt="Hollandais 4"></li>
+        <li data-prix="78"><img src="i.hollandais/hollandais4.jpg" alt="Hollandais 5"></li>
+        <li data-prix="80"><img src="i.hollandais/hollandais5.jpg" alt="Hollandais 6"></li>
+        <li data-prix="82"><img src="i.hollandais/hollandais6.jpg" alt="Hollandais 7"></li>
+        <li data-prix="84"><img src="i.hollandais/hollandais22.jpg" alt="Hollandais 8"></li>
+        <li data-prix="86"><img src="i.hollandais/hollandais8.jpg" alt="Hollandais 9"></li>
+        <li data-prix="88"><img src="i.hollandais/hollandais9.jpg" alt="Hollandais 10"></li>
+      </ul>
+
+      <div id="modeles-pagne"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>AfriStyle Boutique</h3>
+        <p>La mode africaine au cœur du style moderne.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Coordonnées</h4>
+        <p>Email : contact@afristyle.com</p>
+        <p>Téléphone : +243 8221 333 45</p>
+        <p>Adresse : Kinshasa, République Démocratique Du Congo</p>
+      </div>
+      <div class="footer-section">
+        <h4>Suivez-nous</h4>
+        <div class="social-icons">
+          <a href="facebook"><img src="images/facebook_logo_square_icon_134009.png" alt="Facebook"></a>
+          <a href="instagram"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="twitter"><img src="images/twitter_logo_circle_icon_134015.png" alt="Twitter"></a>
+          <a href="whatsapp"><img src="images/whatsapp_logo_icon_147205.png" alt="whatsapp"></a>
+          <a href="tik tok"><img src="images/tiktok_logo_icon_134006.png" alt="tiktok"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 AfriStyle Boutique. Tous droits réservés.
+    </div>
+    <div class="footer-rose"></div>
+  </footer>
+
+  <script src="catalogue.js"></script>
+</body>
+</html>
