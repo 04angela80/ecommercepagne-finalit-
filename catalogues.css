@@ -1,8 +1,8 @@
 :root {
     /* Définition des variables CSS pour les couleurs et polices principales */
-    --main-color: #e91e63; /* Rose framboise élégant */
-    --accent-color: #ffb400; /* Or doux */
-    --bg-color: #fff6fa; /* Fond clair rosé */
+    --main-color: #e91e63;
+    --accent-color: #ffb400; 
+    --bg-color: #fff6fa; 
     --text-color: #333;
     --font-main: 'Poppins', sans-serif;
     --font-heading: 'Playfair Display', serif;
