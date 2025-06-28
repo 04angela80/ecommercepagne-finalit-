@@ -1,15 +1,10 @@
 let panier = JSON.parse(localStorage.getItem('panier')) || [];
 
 function showModeles(type) {
-  // Récupère les <li> de la liste correspondante
   const items = Array.from(document.querySelectorAll(`#${type}-images li`));
-
-  // Mettre en surbrillance la carte sélectionnée
   document.querySelectorAll('.pagne-card').forEach(c => c.classList.remove('active'));
   const index = type === 'wax' ? 0 : type === 'super' ? 1 : 2;
   document.querySelectorAll('.pagne-card')[index].classList.add('active');
-
-  // Générer les modèles avec images, prix personnalisés et étoiles
   const container = document.getElementById('modeles-pagne');
   container.innerHTML = `
     <div class="liste-modeles">
@@ -40,8 +35,6 @@ function ajouterAuPanier(nom, image, prix) {
 function majCompteurPanier() {
   document.getElementById('compteur-panier').textContent = panier.length;
 }
-
-// Clique sur l'icône panier : va vers la page panier.html
 document.addEventListener('DOMContentLoaded', function () {
   majCompteurPanier();
   document.getElementById('panier-flottant').onclick = function () {
